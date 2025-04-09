@@ -1,6 +1,6 @@
 var mongoose = require("mongoose")
 
-mongoose.connect("mongodb+srv://sonalrk299:sonal@cluster0.o1pe09y.mongodb.net/user?retryWrites=true&w=majority&appName=Cluster0").then(()=>{
+mongoose.connect(process.env.mongodb_url).then(()=>{
     console.log("connected to DB")
 }).catch((err)=>{
     console.log(err)
